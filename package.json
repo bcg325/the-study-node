@@ -22,7 +22,7 @@
     "url": "https://github.com/bcg325/the-study-node/issues"
   },
   "homepage": "https://github.com/bcg325/the-study-node#readme",
-  "devDependencies": {
+  "dependencies": {
     "cross-env": "^7.0.3"
   }
 }
