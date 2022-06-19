@@ -10,7 +10,7 @@ node_modules
 
 /coverage
 
-/build
+/client/build
 
 .DS_Store
 .env.local
