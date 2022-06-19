@@ -1,0 +1,25 @@
+{
+  "name": "the-study-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd server && cross-env NODE_ENV=production node index.js",
+    "dev": "cd server && cross-env NODE_ENV=development nodemon index.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcg325/the-study-node.git"
+  },
+  "keywords": [],
+  "author": "Bryan Chavez-Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcg325/the-study-node/issues"
+  },
+  "homepage": "https://github.com/bcg325/the-study-node#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
