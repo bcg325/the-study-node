@@ -28,7 +28,7 @@ router.get(
   "/google/callback",
   passport.authenticate("google", {
     successRedirect: process.env.CLIENT_URL + "notes",
-    failureRedirect: "/authTESTING",
+    failureRedirect: "/auth",
   })
 );
 
