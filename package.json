@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/bcg325/the-study-node#readme",
   "dependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "serve": "^13.0.2"
   }
 }
