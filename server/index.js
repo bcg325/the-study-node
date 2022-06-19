@@ -59,6 +59,8 @@ app.use(
   })
 );
 
+app.set("trust proxy", true);
+
 app.use(passport.initialize());
 app.use(passport.session());
 
