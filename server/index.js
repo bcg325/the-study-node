@@ -44,11 +44,9 @@ app.use(
       client: clientP,
     }),
     cookie: {
-      //missing some more configs, add later:
-      //secure
-      //samesite
       secure: process.env.NODE_ENV === "production",
       maxAge: 1000 * 60 * 60 * 24,
+      httpOnly: true,
     },
   })
 );
@@ -59,6 +57,11 @@ app.use(
     credentials: true,
   })
 );
+
+app.use(express.static(path.resolve(__dirname, "../client/build")));
+app.get("*", function (req, res) {
+  response.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
+});
 
 app.use(passport.initialize());
 app.use(passport.session());
