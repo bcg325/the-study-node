@@ -58,11 +58,6 @@ app.use(
   })
 );
 
-app.use(express.static(path.resolve(__dirname, "../client/build")));
-app.get("*", function (req, res) {
-  response.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
-});
-
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -70,6 +65,17 @@ app.use("/auth", authRoutes);
 app.use("/notes", noteRoutes);
 app.use("/tasks", taskRoutes);
 app.use("/timer", timerRoutes);
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.resolve(__dirname, "../client/build")));
+  app.get("*", function (req, res) {
+    res.sendFile(
+      path.resolve(__dirname, "../", "client", "build", "index.html")
+    );
+  });
+} else {
+  app.get("/", (req, res) => res.send("Please set to production"));
+}
 
 app.use(errorHandler);
 
