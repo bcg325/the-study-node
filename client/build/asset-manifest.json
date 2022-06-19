@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2154f5cb.css",
+    "main.js": "/static/js/main.92af37c4.js",
+    "static/media/space.png": "/static/media/space.1a5b507d06155fb3a6ee.png",
+    "static/media/alarm.wav": "/static/media/alarm.3d0e1d8684c791a62a06.wav",
+    "static/media/notesPage.png": "/static/media/notesPage.65bffc270093e3ea63c8.png",
+    "static/media/tasksPage.png": "/static/media/tasksPage.c14991c84ac5ae43525a.png",
+    "static/media/timerPage.png": "/static/media/timerPage.2b957ae9724a7c67d4e2.png",
+    "static/media/notes.svg": "/static/media/notes.abab0e298f7f43add41fa309f85fba62.svg",
+    "static/media/tasks.svg": "/static/media/tasks.b6040a0d10cc7daf3e0992b87afb8ef7.svg",
+    "static/media/snLogoWhite.svg": "/static/media/snLogoWhite.6890e59e25c6d7ed0c2691bf629cd0e3.svg",
+    "static/media/time.svg": "/static/media/time.60ca3c127036af08c133aeced25ebdaf.svg",
+    "index.html": "/index.html",
+    "main.2154f5cb.css.map": "/static/css/main.2154f5cb.css.map",
+    "main.92af37c4.js.map": "/static/js/main.92af37c4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2154f5cb.css",
+    "static/js/main.92af37c4.js"
+  ]
+}
