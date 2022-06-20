@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "/timer/";
+const API_URL = "/api/timer/";
 
 const getSettings = async () => {
   const res = await axios.get(API_URL + "settings", {
