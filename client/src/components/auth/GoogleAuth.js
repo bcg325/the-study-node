@@ -7,10 +7,7 @@ const GoogleAuth = (props) => {
     " flex items-center mx-auto border-gray-300 border-2 shadow align-center justify-center space-x-3 py-2 cursor-pointer rounded-2xl ";
 
   const onClick = () => {
-    window.open(
-      "https://the-study-node.herokuapp.com/api/auth/google",
-      "_self"
-    );
+    window.open("https://the-study-node.herokuapp.com/auth/google", "_self");
   };
   return (
     <motion.div
