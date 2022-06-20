@@ -2,10 +2,10 @@ import MainNavbar from "./MainNavbar";
 import { Outlet } from "react-router-dom";
 import TimerBar from "./timer/TimerBar";
 import { useSelector } from "react-redux";
-import { useState } from "react";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 const MainApp = () => {
-  const [collapse, setCollapse] = useState(false);
+  const [collapse, setCollapse] = useLocalStorage("sidebarCollapse", true);
   const { showTimerModule, active } = useSelector((state) => state.timer);
 
   const toggleCollapse = () => {
