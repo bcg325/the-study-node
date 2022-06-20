@@ -5,12 +5,11 @@ import { IoMdClose } from "react-icons/io";
 import Button from "../../../../components/utilities/Button";
 import Input from "../../../../components/utilities/Input";
 import NotesColumn from "./NotesColumn";
-import useLocalStorage from "../../../../hooks/useLocalStorage";
 import selectFilteredNotes from "../../../../selectors/selectFilteredNotes";
 import Sidebar from "../../../../components/utilities/Sidebar";
 
 const NotesSidebar = ({ notes, collapse, toggleCollapse, handleNewNote }) => {
-  const [filter, setFilter] = useLocalStorage("noteFilter", "lastChanged");
+  const [filter, setFilter] = useState("lastChanged");
   const [search, setSearch] = useState("");
 
   const onChangeFilter = (e) => {

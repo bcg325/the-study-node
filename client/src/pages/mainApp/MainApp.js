@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import useLocalStorage from "../../hooks/useLocalStorage";
 
 const MainApp = () => {
-  const [collapse, setCollapse] = useLocalStorage("sidebarCollapse", true);
+  const [collapse, setCollapse] = useLocalStorage("sbCollapse", true);
   const { showTimerModule, active } = useSelector((state) => state.timer);
 
   const toggleCollapse = () => {
