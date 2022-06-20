@@ -64,10 +64,10 @@ app.set("trust proxy", true);
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use("/auth", authRoutes);
-app.use("/notes", noteRoutes);
-app.use("/tasks", taskRoutes);
-app.use("/timer", timerRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/notes", noteRoutes);
+app.use("/api/tasks", taskRoutes);
+app.use("/api/timer", timerRoutes);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.resolve(__dirname, "../client/build")));
