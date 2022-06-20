@@ -58,7 +58,7 @@ const Notes = () => {
         {!currentNote && (
           <div className={contentStyles}>
             <img
-              className="w-[24rem] mx-auto "
+              className="w-[22rem] mx-auto "
               width="24rem"
               src={notesImg}
               alt="illustration of an empty notebook"

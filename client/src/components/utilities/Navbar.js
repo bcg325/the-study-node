@@ -16,6 +16,7 @@ const Navbar = () => {
 
   useEffect(() => {
     dispatch(getUser());
+
     return () => {
       dispatch(reset());
     };

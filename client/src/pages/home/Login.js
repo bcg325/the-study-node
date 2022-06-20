@@ -38,7 +38,7 @@ const Register = () => {
     },
   };
 
-  const { user, isLoading, isError, isSuccess, message } = useSelector(
+  const { user, isLoading, isFormError, isSuccess } = useSelector(
     (state) => state.auth
   );
 
@@ -64,8 +64,8 @@ const Register = () => {
   }
 
   return (
-    <div className="w-1/2 max-w-xs mx-auto">
-      <GoogleAuth className="mt-4" text="Login with Google"></GoogleAuth>
+    <div className="w-5/6 lg:w-1/2 max-w-xs mx-auto">
+      <GoogleAuth className="mt-6" text="Login with Google"></GoogleAuth>
       <h2 className="text-xl flex justify-center items-center">
         <div className="w-1/2 border-b-2 border-gray-300"></div>
         <span className="bg-white p-4 text-gray-600">or</span>
@@ -75,7 +75,7 @@ const Register = () => {
         <h1 className="text-2xl text-center mb-3">Login</h1>
         <FormAlert
           className="text-red-600"
-          error={isError}
+          error={isFormError}
           message={"Email or password is incorrect"}
           icon={IoAlertCircle}
         />

@@ -56,7 +56,7 @@ const Register = () => {
 
   const watchPassword = watch("password", false);
 
-  const { user, isLoading, isError, isSuccess, message } = useSelector(
+  const { user, isLoading, isFormError, isSuccess, message } = useSelector(
     (state) => state.auth
   );
 
@@ -83,7 +83,7 @@ const Register = () => {
   }
 
   return (
-    <div className="w-1/2 max-w-xs mx-auto">
+    <div className="w-5/6 lg:w-1/2 max-w-xs mx-auto">
       <GoogleAuth className="mt-4" text="Sign Up with Google" />
 
       <h2 className="text-xl flex justify-center items-center">
@@ -96,7 +96,7 @@ const Register = () => {
         <h1 className="text-2xl text-center mb-3">Sign Up</h1>
         <FormAlert
           className="text-red-600"
-          error={isError}
+          error={isFormError}
           message={message}
           icon={IoAlertCircle}
         />
