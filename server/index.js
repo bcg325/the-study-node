@@ -27,6 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 
+mongoose.set("strictQuery", false);
 const clientP = mongoose
   .connect(process.env.ATLAS_URI, {
     useNewUrlParser: true,
