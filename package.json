@@ -7,7 +7,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "(cd server && npm install) && (cd client && npm install)",
+    "postinstall": "cd server && npm install && cd .. && cd client && npm install",
     "start": "cd server && cross-env NODE_ENV=production node index.js",
     "dev": "cd server && cross-env NODE_ENV=development nodemon index.js",
     "build": "cd client && npm install && npm run build"
