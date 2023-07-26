@@ -65,6 +65,16 @@ app.set("trust proxy", true);
 app.use(passport.initialize());
 app.use(passport.session());
 
+if (process.env.NODE_ENV === "production") {
+  app.get(
+    "/google/callback",
+    passport.authenticate("google", {
+      successRedirect: "https://studynode.up.railway.app/notes",
+      failureRedirect: "https://studynode.up.railway.app/login",
+    })
+  );
+}
+
 app.use("/auth", authRoutes);
 app.use("/api/notes", noteRoutes);
 app.use("/api/tasks", taskRoutes);
