@@ -113,6 +113,10 @@ const Register = () => {
           </Button>
         </form>
       </Card>
+      <p className="mt-4 text-center">
+        Try the app: <span className="font-medium">test@gmail.com</span> &{" "}
+        <span className="font-medium">password123</span>
+      </p>
     </div>
   );
 };
