@@ -9,7 +9,7 @@
   "scripts": {
     "start": "cd server && cross-env NODE_ENV=production node index.js",
     "dev": "cd server && cross-env NODE_ENV=development nodemon index.js",
-    "build": "cd server && npm install --omit=dev && cd .. && cd client && npm install --omit=dev && npm run build"
+    "build": "cd server && npm install && cd .. && cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
