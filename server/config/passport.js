@@ -42,7 +42,8 @@ passport.use(
       callbackURL: "/auth/google/callback",
     },
     function (accessToken, refreshToken, profile, done) {
-      User.findOne({ googleId: profile.id }, async (err, user) => {
+      const googleEmail = profile.emails[0].value;
+      User.findOne({ email: googleEmail }, async (err, user) => {
         if (err) {
           return done(err);
         }
@@ -53,7 +54,7 @@ passport.use(
           const newUser = await User.create({
             googleId: profile.id,
             name: profile.displayName,
-            email: profile.emails[0].value,
+            email: googleEmail,
           });
 
           return done(null, newUser);
